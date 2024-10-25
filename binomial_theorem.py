@@ -124,6 +124,4 @@ def binomial_theorem(power) -> None:
             print(' + ', end='')
         else:
             print()
-
-
-binomial_theorem(6)
+            
