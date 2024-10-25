@@ -109,9 +109,9 @@ def binomial_theorem(power) -> None:
         # Coefficient of the element
         coefficient = n_choose_r(power, index) * math.pow(coeff1_1, power - index) * math.pow(coeff1_2, index)
         # Power of first variable (descending)
-        power_1 = '' if power - index == 0 else coeff2_1 if power - index == 1 else coeff2_1 + '^' + str(power - index)
+        power_1 = '' if power - index == 0 or coeff2_1 == '' else coeff2_1 if power - index == 1 else coeff2_1 + '^' + str(power - index)
         # Power of first variable (ascending)
-        power_2 = '' if index == 0 else coeff2_2 if index == 1 else coeff2_2 + '^' + str(index)
+        power_2 = '' if index == 0 or coeff2_2 == '' else coeff2_2 if index == 1 else coeff2_2 + '^' + str(index)
 
         print(coefficient, power_1, power_2, end='', sep='')
 
@@ -124,4 +124,4 @@ def binomial_theorem(power) -> None:
             print()
 
 
-binomial_theorem(2)
+binomial_theorem(6)
