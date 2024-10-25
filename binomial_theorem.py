@@ -113,7 +113,7 @@ def binomial_theorem(power) -> None:
         # Power of first variable (ascending)
         power_2 = '' if index == 0 or coeff2_2 == '' else coeff2_2 if index == 1 else coeff2_2 + '^' + str(index)
 
-        print(coefficient, power_1, power_2, end='', sep='')
+        print(f'{coefficient}{power_1}{power_2}', end='')
 
         index += 1
         
