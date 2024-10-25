@@ -110,8 +110,10 @@ def binomial_theorem(power) -> None:
         coefficient = n_choose_r(power, index) * math.pow(coeff1_1, power - index) * math.pow(coeff1_2, index)
         # Power of first variable (descending)
         power_1 = '' if power - index == 0 or coeff2_1 == '' else coeff2_1 if power - index == 1 else coeff2_1 + '^' + str(power - index)
+        power_1 = f'({power_1})' if len(power_1) > 1 else power_1
         # Power of first variable (ascending)
         power_2 = '' if index == 0 or coeff2_2 == '' else coeff2_2 if index == 1 else coeff2_2 + '^' + str(index)
+        power_2 = f'({power_2})' if len(power_2) > 1 else power_2
 
         print(f'{coefficient}{power_1}{power_2}', end='')
 
